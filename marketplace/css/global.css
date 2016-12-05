@@ -1,0 +1,18 @@
+
+
+body {
+    background-image: url('../images/flat-design-kitchen-equipment-background-vector.jpg');
+}
+
+.btn-radius{
+    border-radius:0;
+    width: 100%;
+}
+
+.register {
+    
+    background-color: #FFF;
+    margin:5%;
+    padding: 4%;
+    box-shadow:0 3px 10px 0;
+}

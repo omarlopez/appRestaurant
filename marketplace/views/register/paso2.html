@@ -1,0 +1,64 @@
+
+<div class="register" style="width:100%;">
+    <h1>Paso 2</h1>
+    <form name="perfilUser" novalidate ng-submit="step2()">
+        <div class="form-group" ng-class="{'has-error':perfilUser.namecocina.$invalid}">
+            <label for="Nombre">Elige el nombre de tu cocina *</label>
+            <input type="text" name="namecocina" class="form-control" id="nombre" placeholder="Cocina" ng-model="form.namecocina" required>
+            <span class="help-block" ng-show="perfilUser.namecocina.$error.required">Debes ingresar el nombre de tu cocina</span>
+        </div>
+
+        <div class="from-group" ng-class="{'has-error': perfilUser.state.$invalid}">
+            <label for="Estado">Estado *</label>
+            <input type="text" class="form-control" name="state" ng-model="form.state" placeholder="Estado" required>
+            <span class="help-block" ng-show="perfilUser.state.$error.required">Debes de ingresar tu estado de residencia</span>
+        </div>
+
+        <div class="form-group" ng-class="{'has-error': perfilUser.city.$invalid}">
+            <label for="Ciudad">Ciudad *</label>
+            <input type="text" class="form-control" name="city" id="city" placeholder="Ciudad" ng-model="form.city" required>
+            <span class="help-block" ng-show="perfilUser.city.$error.required">Debes de agregar una Ciudad</span>
+        </div>
+
+        <div class="form-group" ng-class="{'has-error': perfilUser.municipality.$invalid}">
+            <label for="municipio">Delegacion/municipio *</label>
+            <input type="text" class="form-control" id="municipality" name="municipality" ng-model="form.municipality" placeholder="Delegación/Municipio" required>
+            <span class="help-block" ng-show="perfilUser.municipality.$error.required">Debes de agregar una Delegación/Múnicipio</span>
+        </div>
+
+        <div class="form-group" ng-class="{'has-error': perfilUser.add_1.$invalid}">
+            <label for="direccion">Dirección 1 *</label>
+            <input type="text" class="form-control" id="add_1" name="add_1" placeholder="Direccion 1" ng-model="form.add_1" required>
+            <span class="help-block" ng-show="perfilUser.add_1.$error.required">Debes de agregar tu dirección</span>
+        </div>
+      
+        <div class="form-group" ng-class="{'has-error': perfilUser.add_2.$invalid}">
+            <label for="direccion">Dirección 2 *</label>
+            <input type="text" class="form-control" id="add_2" name="add_2" placeholder="Direccion 2" ng-model="form.add_2" required>
+            <span class="help-block" ng-show="perfilUser.add_2.$error.required">Debes ingresar una dirección adicional</span>
+
+        </div>
+
+        <div class="form-group" ng-class="{'has-error': perfilUser.cp.$invalid}">
+            <label for="cp">Código postal *</label>
+            <input type="text" class="form-control" id="cp" name="cp" ng-model="form.cp" placeholder="Código postal" required>
+            <span class="help-block" ng-show="perfilUser.cp.$error.required">Debes ingresar un codigo postal</span>
+        </div>
+
+        <div class="form-group" ng-class="{'has-error': perfilUser.phone.$invalid}">
+            <label for="phone">Telefono local *</label>
+            <input type="text" class="form-control" id="phone" name="phone" ng-model="form.phone" placeholder="Telefono local" required>
+            <span class="help-block" ng-show="perfilUser.phone.$error.required">Debes de ingresar un número telefonico</span>
+        </div>
+
+        <div class="form-group" ng-class="{'has-error': perfilUser.cellPhone.$invalid}">
+            <label for="cell">Celular *</label>
+            <input type="text" class="form-control" id="cell" placeholder="Celular" name="cellPhone" ng-model="form.cellPhone" required>
+            <span class="help-block" ng-show="perfilUser.cellPhone.$error.required">Debes de ingresar un número de celular</span>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-radius" ng-disabled='!perfilUser.$valid'>Paso3</button>
+        </div>
+    </form>
+</div>
