@@ -5,6 +5,7 @@ core:
   environment:
     - FLASK_DEBUG="True"
     - FLASK_RETHINKDB_HOST="rethinkdb"
+    - FLASK_DATABASE="food"
   volumes:
     - ./core/:/app
   command: python manage.py runserver --host 0.0.0.0 --port 8003

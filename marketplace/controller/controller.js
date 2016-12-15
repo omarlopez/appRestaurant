@@ -8,13 +8,20 @@ app.controller('formController', function($scope, $window, $location, services){
 
         // ajax
         $scope.data = {
-            'hola': 'test'
+            'name': $scope.form.name,
+            'user': $scope.form.user,
+            'email': $scope.form.email,
+            'password': $scope.form.pass,
+            'ubication': [], 
+            'sale', []
         }
+
         services.step1($scope.data).success(function (data, status){
             console.log(data)
-        }) 
 
-        //window.location = '#paso2'
+        })
+
+        window.location = '#paso2' 
     }
 
     $scope.step2 = function(){
