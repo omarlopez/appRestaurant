@@ -11,9 +11,7 @@ app.controller('formController', function($scope, $window, $location, services){
             'name': $scope.form.name,
             'user': $scope.form.user,
             'email': $scope.form.email,
-            'password': $scope.form.pass,
-            'ubication': [], 
-            'sale', []
+            'password': $scope.form.pass
         }
 
         services.step1($scope.data).success(function (data, status){

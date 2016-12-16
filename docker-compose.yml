@@ -8,6 +8,8 @@ core:
     - FLASK_DATABASE="food"
   volumes:
     - ./core/:/app
+  links:
+    - rethinkdb:rethinkdb
   command: python manage.py runserver --host 0.0.0.0 --port 8003
 
 marketplace:
