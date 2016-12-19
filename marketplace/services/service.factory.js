@@ -3,7 +3,7 @@ var services = angular.module('services', [])
 
 services.factory('services', function ($http, $window, $rootScope){
 
-    var urlBase = "http://2ad63e7e.ngrok.io"
+    var urlBase = "http://abfe3000.ngrok.io"
     
     var Services = {}
 
