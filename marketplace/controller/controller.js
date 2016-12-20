@@ -14,12 +14,23 @@ app.controller('formController', function($scope, $window, $location, services){
             'password': $scope.form.pass
         }
 
-        services.step1($scope.data).success(function (data, status){
-            console.log(data)
+        services.step1($scope.data).success(function (data, status, headers, config){
+            
+            console.log(data, status)
+            if(data.code == 1){
+                //code 1 = el usuario ya existe
+                window.location = '#continue-register'
+            }
+            if(data.code == 0){
+                // code 0 = el usuario registrado exitoso
+                window.location = '#paso2'
+            }
 
+        }).error(function (data, status, headers, config){
+            console.log(data, status)
         })
 
-        window.location = '#paso2' 
+        //window.location = '#paso2' 
     }
 
     $scope.step2 = function(){
